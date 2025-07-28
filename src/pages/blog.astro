@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title="Blogs" sideBarActiveItemID="blog">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Blogs</div>
+  </div>
+  Welcome to my blog! I love writing about the things I care about—whether it’s documentation, community, or simply sharing what I’m working on in my day-to-day.
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Scientific Python: Developer Summit 1"
+    img="/summit.webp"
+    desc="The first Scientific Python Developer Summit (May 22-26, 2023) brought together 34 developers at the eScience Institute at the University of Washington to develop shared infrastructure, documentation, tools, and recommendations for libraries in the Scientific Python ecosystem."
+    url="https://blog.scientific-python.org/scientific-python/dev-summit-1/"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Scientific Python: Community developed, community owned"
+    img="/sp-blog.webp"
+    desc="The Scientific Python project is an initiative to better coordinate and support the scientific Python ecosystem of libraries and to grow the surrounding community. It aims to improve communication between ecosystem projects, to better plan for their joint future, and to make that future a reality."
+    url="https://blog.scientific-python.org/scientific-python/scientific-python-project/"
+  />
+  <div class="divider my-0"></div>
+    <HorizontalCard
+    title="Spot the differences: what is new in Spyder 5?"
+    img="/spyder5.webp"
+    desc="In case you missed it, Spyder 5 was released at the beginning of April! This blog post is a conversation attempting to document the long and complex process of improving Spyder's UI with this release."
+    url="https://labs.quansight.org/blog/2021/04/spot-the-diffenrences"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="A step towards educating with Spyder"
+    img="/spyder.webp"
+    desc="As a community manager in the Spyder team, I have been looking for ways of involving more users in the community and making Spyder useful for a larger number of people. With this, a new idea came: Education. \n For the past months, we have been wondering with the team whether Spyder could also serve as a teaching-learning platform, especially in this era where remote instruction has become necessary. "
+    url="https://labs.quansight.org/blog/a-step-towards-educating-with-spyder"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="STX Next, Python development company, uses Spyder to improve their workflow"
+    img="/stx.webp"
+    desc="STX Next, one of Europe’s largest Python development companies, has shared with us how Spyder has been a powerful tool for them when performing data analysis. It is a pleasure for us on the Spyder team to work every day to improve the workflow of developers, scientists, engineers and data analysts. We are very glad to receive and share a STX Next testimonial about Spyder, along with an interview with one of their developers, Michael Wiśniewski, who has found Spyder very useful in his job."
+    url="https://www.spyder-ide.org/blog/STX-interview"
+  />
+  <div class="divider my-0"></div>
+    <HorizontalCard
+    title="Writing docs is not just writing docs"
+    img="/spyder.webp"
+    desc="I joined the Spyder team almost two years ago, and I never thought I was going to end up working on docs. Six months ago I started a project with CAM Gerlach and Carlos Cordoba to improve Spyder’s documentation. At first, I didn’t actually understand how important docs are for software, especially for open source projects. However, during all this time I’ve learned how documentation has a huge impact on the open-source community and I’ve been thankful to have been able to do this. But, from the beginning, I asked myself 'why am I the ‘right person’ for this?'"
+    url="https://labs.quansight.org/blog/2020/07/writing-docs-is-not-just-writing-docs"
+  />
+  <div class="divider my-0"></div>
+    <HorizontalCard
+    title="File management improvements in Spyder4"
+    img="/files.webp"
+    desc="Version 4.0 of Spyder—a powerful Python IDE designed for scientists, engineers and data analysts—is almost ready! It has been in the making for well over two years, and it contains lots of interesting new features. We will focus on the Files pane in this post, where we've made several improvements to the interface and file management tools."
+    url="https://labs.quansight.org/blog/2019/11/file-management-improvements-in-spyder4"
+  />
+  <div class="divider my-0"></div>
+
+</BaseLayout>

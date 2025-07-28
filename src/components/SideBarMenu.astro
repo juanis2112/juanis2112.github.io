@@ -1,19 +1,21 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const activeClass = "active"; // For primary color replace with `active` class
 ---
+
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
     <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="services" href="/services">Services</a></li>
-    <li><a class="py-3 text-base" id="store" href="/store">Store</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
+    <li><a class="py-3 text-base" id="projects" href="/projects/">Projects</a></li>
+    <li><a class="py-3 text-base" id="talks" href="/talks">Talks</a></li>
+    <li><a class="py-3 text-base" id="interviews" href="/interviews">Developer Interviews</a></li>
+    <li><a class="py-3 text-base" id="publications" href="/publications">Publications</a></li>
+    <li><a class="py-3 text-base" id="blog" href="/blog">Blog</a></li>
     <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
     <li>
         <a
             class="py-3 text-base"
-            href="mailto:contact.manuelernestog@gmail.com"
+            href="mailto:jgomez91@ucsc.edu"
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade">Contact</a
         >

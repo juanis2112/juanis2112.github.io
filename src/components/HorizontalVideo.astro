@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, video, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
@@ -10,16 +10,27 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
-        img && (
-          <Image
-            src={img}
-            width={750}
-            height={422}
-            format="webp"
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
-        )
+  video ? (
+    <iframe
+      src={video}
+      width="600"
+      height="200"
+      #class="rounded-lg max-w-full md:max-w-[13rem]"
+      title={title}
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  ) : img && (
+    <Image
+      src={img}
+      width="340"
+      height="113"
+      format="webp"
+      alt={title}
+      #class="max-w-full md:max-w-[13rem]"
+    />
+  )
       }
       <div class="grow w-full">
         <h1 class="text-xl font-bold">
