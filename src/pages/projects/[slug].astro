@@ -4,18 +4,24 @@ import PostLayout from "../../layouts/PostLayout.astro";
 import createSlug from "../../lib/createSlug";
 
 export async function getStaticPaths() {
-  const spEntries = await getCollection("scientific-python");
-  const spyderEntries = await getCollection("spyder");
+  const collections = [
+    { name: "scientific-python", entries: await getCollection("scientific-python") },
+    { name: "spyder", entries: await getCollection("spyder") },
+    { name: "spyder-guides", entries: await getCollection("spyder-guides") },
+  ];
 
-  const allEntries = [...spEntries, ...spyderEntries];
-
-  return allEntries.map((entry) => ({
-    params: { slug: createSlug(entry.data.title, entry.slug) },
-    props: { entry },
-  }));
+  return collections.flatMap(({ name, entries }) =>
+    entries.map((entry) => ({
+      params: { slug: createSlug(entry.data.title, entry.slug) },
+      props: {
+        entry,
+        collection: name,
+      },
+    }))
+  );
 }
 
-const { entry } = Astro.props;
+const { entry, collection } = Astro.props;
 const post = entry.data;
 const { Content } = await entry.render();
 ---

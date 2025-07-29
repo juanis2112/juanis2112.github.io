@@ -7,23 +7,22 @@ import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths({ paginate }) {
   const spProjects = await getCollection("scientific-python");
-  const spyderProjects = await getCollection("spyder");
   const spyderGuides = await getCollection("spyder-guides");
+  const spyderProjects = await getCollection("spyder");
 
   // Sort by publication date descending
   spProjects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-  spyderProjects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   spyderGuides.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  spyderProjects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-  // Paginate spProjects, but also pass spyderProjects and spyderGuides as props
   return paginate(spProjects, {
-    pageSize: 10,
-    props: { spyderProjects, spyderGuides }
+  pageSize: 10,
+  props: { spyderGuides, spyderProjects }
   });
 }
 
 // Accessing props in your component/page
-const { page, spyderProjects = [], spyderGuides = [] } = Astro.props;
+const { page, spyderGuides = [] , spyderProjects = []} = Astro.props;
 
 ---
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
@@ -105,7 +104,6 @@ const { page, spyderProjects = [], spyderGuides = [] } = Astro.props;
   <div class="mb-5">
     <div class="text-2xl w-full font-bold">Spyder Guides</div>
   </div>
-
   {
     spyderGuides.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
