@@ -11,25 +11,27 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
     <div class="hero-content flex-col md:flex-row">
       {
   video ? (
+  <div class="w-full aspect-video max-w-md md:max-w-[13rem] relative">
     <iframe
       src={video}
-      width="600"
-      height="200"
-      #class="rounded-lg max-w-full md:max-w-[13rem]"
+      class="absolute top-0 left-0 w-full h-full rounded-lg"
       title={title}
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+  </div>
   ) : img && (
-    <Image
-      src={img}
-      width="340"
-      height="113"
-      format="webp"
-      alt={title}
-      #class="max-w-full md:max-w-[13rem]"
-    />
+<div class="w-full aspect-video max-w-md md:max-w-[13rem] relative">
+  <Image
+    src={img}
+    width={340}
+    height={113}
+    format="webp"
+    alt={title}
+    class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+  />
+</div>
   )
       }
       <div class="grow w-full">
