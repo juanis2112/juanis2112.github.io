@@ -7,11 +7,11 @@ video: "https://www.youtube.com/embed/Ul79ihg41Rs?si=p3S3bLw6Xk1vfm7h"
 
 ## 🎬 HOOK
 
-¿Have you ever messed up Spyder by trying to install a package?  
-¿Does your IPython console give you a bunch of errors?  
-¿Have you installed a python package and couldn’t get it to work?  
-¿Has your Spyder died for apparently no reason and never come back to life again?  
-¿Did you install Spyder and never got it working at all?
+Have you ever messed up Spyder by trying to install a package?  
+Does your IPython console give you a bunch of errors?  
+Have you installed a python package and couldn’t get it to work?  
+Has your Spyder died for apparently no reason and never come back to life again?  
+Did you install Spyder and never got it working at all?
 
 This video is for you!
 
